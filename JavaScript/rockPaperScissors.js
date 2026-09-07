@@ -1,3 +1,6 @@
+let userScore = 0;
+let computerScore = 0;
+
 function computerPlay(){
     let computerChoice = '';
 
@@ -10,8 +13,6 @@ function computerPlay(){
     } else {
         computerChoice = 'scissors';
     }
-
-    console.log(computerChoice);
 
     return computerChoice;
 }
@@ -40,4 +41,44 @@ function userPlay(){
     }
 
     return userChoice;
+}
+
+function playRound(){
+
+    const computerSelection = computerPlay();
+    const userSelection = userPlay();
+
+    if (computerSelection == userSelection){
+        console.log('It\'s a tie! You both chose ' + userSelection + '.');
+    } else if (computerSelection == 'rock' && userSelection == 'scissors'){
+        console.log('You lose! Rock beats scissors.');
+        computerScore++;
+    } else if (computerSelection == 'paper' && userSelection == 'rock'){
+        console.log('You lose! Paper beats rock.');
+        computerScore++;
+    } else if (computerSelection == 'scissors' && userSelection == 'paper'){
+        console.log('You lose! Scissors beats paper.');
+        computerScore++;
+    } else {
+        console.log('You win! ' + userSelection + ' beats ' + computerSelection + '.');
+        userScore++;
+    }
+}
+
+function game(){
+    console.log('Welcome to the Arena! Two enter, only one leaves. Who will it be? The mighty computer or you, the puny human? Let\'s the battle commence!')
+
+    while(userScore < 3 && computerScore < 3){
+        playRound();
+        console.log('Current Score: You - ' + userScore + ' | Computer - ' + computerScore);
+    }
+
+    if (userScore == 3){
+        console.log('Congratulations! You have defeated the mighty computer and are allowed to leave... for now');
+    } else {
+        console.log('Mwuahaha! The mighty computer has defeated you! Enjoy your eternity in a digital graveyard, human!');
+    }
+
+    userScore = 0;
+    computerScore = 0;
 }
