@@ -1,3 +1,13 @@
+ alert('👾 WELCOME TO ROCK, PAPER, SCISSORS! 👾\n\n' +
+    'Click OK and open the console \n\n' + 
+    'To open the console, press:\n\n' +
+    'Windows/Linux: Ctrl + Shift + J\n' +
+    'Mac: Cmd + Option + J')
+  
+ 
+ console.log('Welcome to the Arena! Two enter, only one leaves. Who will it be? The mighty computer or you, the puny human? Let the battle commence!')
+ console.log('To start fighting for your miserable life, type game() and press enter.')
+
 let userScore = 0;
 let computerScore = 0;
 
@@ -66,7 +76,6 @@ function playRound(){
 }
 
 function game(){
-    console.log('Welcome to the Arena! Two enter, only one leaves. Who will it be? The mighty computer or you, the puny human? Let\'s the battle commence!')
 
     while(userScore < 3 && computerScore < 3){
         playRound();
