@@ -6,9 +6,17 @@ alert('👾 WELCOME TO ROCK, PAPER, SCISSORS! 👾\n\n' +
  
  console.log('Welcome to the Arena! Two enter, only one leaves. Who will it be? The mighty computer or you, the puny human? Let the battle commence!')
  console.log('To start fighting for your miserable life, type game() and press enter.')
+ console.log('If you want to know the rules of the game, type instructions() and press enter.')
 
 let userScore = 0;
 let computerScore = 0;
+
+function instructions(){
+    console.log('The rules are simple. You and the computer will take turns choosing a weapon of choice: rock, paper or scissors. \n' +
+    'Rock beats scissors, scissors beats paper and paper beats rock. \n' +
+    'The first to reach 3 points wins the game. \n' +
+    'Good luck, human! You\'ll need it!')
+}
 
 function computerPlay(){
     let computerChoice = '';
@@ -18,11 +26,10 @@ function computerPlay(){
     if (randomNumber == 0){
         computerChoice = 'rock';
     } else if (randomNumber == 1){
-        computerChoice = 'paper';
+        computerChoice = 'paper';``
     } else {
         computerChoice = 'scissors';
     }
-
     return computerChoice;
 }
 
@@ -53,9 +60,8 @@ function userPlay(){
 }
 
 function playRound(){
-
     const computerSelection = computerPlay();
-    const userSelection = userPlay();
+    const userSelection = userPlay();``
 
     if (computerSelection == userSelection){
         console.log('It\'s a tie! You both chose ' + userSelection + '.');
@@ -75,7 +81,6 @@ function playRound(){
 }
 
 function game(){
-
     while(userScore < 3 && computerScore < 3){
         playRound();
         console.log('Current Score: You - ' + userScore + ' | Computer - ' + computerScore);
