@@ -1,5 +1,5 @@
 alert('👾 WELCOME TO ROCK, PAPER, SCISSORS! 👾\n\n' +
-    'Click OK and open the console \n\n' + 
+    'Click OK and open the console to play a game of Rock, Papers, Scissors \n\n' + 
     'Windows/Linux: Ctrl + Shift + J\n' +
     'Mac: Cmd + Option + J')
   
