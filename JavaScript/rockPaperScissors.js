@@ -12,10 +12,10 @@ let userScore = 0;
 let computerScore = 0;
 
 function instructions(){
-    console.log('The rules are simple. You and the computer will take turns choosing a weapon of choice: rock, paper or scissors. \n' +
-    'Rock beats scissors, scissors beats paper and paper beats rock. \n' +
-    'The first to reach 3 points wins the game. \n' +
-    'Good luck, human! You\'ll need it!')
+    return 'The rules are simple. You and the computer will take turns choosing a weapon of choice: rock, paper or scissors. ' +
+    'Rock beats scissors, scissors beats paper and paper beats rock. ' +
+    'The first to reach 3 points wins the game. ' +
+    'Good luck, human! Youll need it!'
 }
 
 function computerPlay(){
@@ -36,7 +36,7 @@ function computerPlay(){
 function userPlay(){
     let userChoice = '';
 
-    let userInput = prompt('Please enter your weapon of choice: rock, paper or scissors').toLowerCase().trim();
+    let userInput = prompt('Please enter your weapon of choice: rock, paper or scissors \n\n' + 'Current Score: You - ' + userScore + ' | Computer - ' + computerScore).toLowerCase().trim();
 
     switch(userInput){
         case 'rock':
@@ -89,11 +89,14 @@ function game(){
     }
 
     if (userScore == 3){
-        console.log('Congratulations! You have defeated the mighty computer and are allowed to leave... for now');
-    } else {
-        console.log('Mwuahaha! The mighty computer has defeated you! Enjoy your eternity in a digital graveyard, human!');
-    }
+        userScore = 0;
+        computerScore = 0;
 
-    userScore = 0;
-    computerScore = 0;
+        return 'Congratulations! You have defeated the mighty computer and are allowed to leave... for now';
+    } else {
+        userScore = 0;
+        computerScore = 0;
+        
+        return 'Mwuahaha! The mighty computer has defeated you! Enjoy your eternity in a digital graveyard, human!';
+    }
 }
