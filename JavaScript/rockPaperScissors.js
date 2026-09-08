@@ -8,6 +8,7 @@ alert('👾 WELCOME TO ROCK, PAPER, SCISSORS! 👾\n\n' +
  console.log('To start fighting for your miserable life, type game() and press enter.')
  console.log('If you want to know the rules of the game, type instructions() and press enter.')
 
+let userChoice = '';
 let userScore = 0;
 let computerScore = 0;
 
@@ -34,9 +35,17 @@ function computerPlay(){
 }
 
 function userPlay(){
-    let userChoice = '';
+    let userInput = prompt('Please enter your weapon of choice: rock, paper or scissors \n\n' + 'Current Score: You - ' + userScore + ' | Computer - ' + computerScore);
+    userChoice = '';
 
-    let userInput = prompt('Please enter your weapon of choice: rock, paper or scissors \n\n' + 'Current Score: You - ' + userScore + ' | Computer - ' + computerScore).toLowerCase().trim();
+    if (userInput !== null) {
+        userInput = userInput.toLowerCase().trim();
+    }
+
+   if (userInput === null){
+        console.log('You have chosen to forfeit the game. The mighty computer wins by default. You remain in the digital arena. If you wish to try again, press game() and enter');
+        return computerScore = 3;
+   }
 
     switch(userInput){
         case 'rock':
@@ -61,9 +70,12 @@ function userPlay(){
 
 function playRound(){
     const computerSelection = computerPlay();
-    const userSelection = userPlay();``
+    const userSelection = userPlay();
 
-
+    if (userChoice == ''){
+        return;
+    }
+    
     if (computerSelection == userSelection){
         console.log('It\'s a tie! You both chose ' + userSelection + '.');
     } else if (computerSelection == 'rock' && userSelection == 'scissors'){
