@@ -43,7 +43,7 @@ function userPlay(){
     }
 
    if (userInput === null){
-        console.log('You have chosen to forfeit the game. The mighty computer wins by default. You remain in the digital arena. If you wish to try again, press game() and enter');
+        console.log('You have chosen to forfeit the game. The mighty computer wins by default. You remain in the digital arena. If you wish to try again, type in game() and press enter');
         return computerScore = 3;
    }
 
@@ -104,11 +104,11 @@ function game(){
         userScore = 0;
         computerScore = 0;
 
-        return 'Congratulations! You have defeated the mighty computer and are allowed to leave... for now. If you wish to play again, press game() and enter.';
+        return 'Congratulations! You have defeated the mighty computer and are allowed to leave... for now. If you wish to play again, type in game() and press enter.';
     } else {
         userScore = 0;
         computerScore = 0;
         
-        return 'Mwuahaha! The mighty computer has defeated you! Enjoy your eternity in a digital graveyard, human! But I feel generous, you can try again, press game() and enter.';
+        return 'Mwuahaha! The mighty computer has defeated you! Enjoy your eternity in a digital graveyard, human! But I feel generous, you can try again, type in game() and press enter.';
     }
 }
