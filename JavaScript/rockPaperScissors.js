@@ -63,6 +63,7 @@ function playRound(){
     const computerSelection = computerPlay();
     const userSelection = userPlay();``
 
+
     if (computerSelection == userSelection){
         console.log('It\'s a tie! You both chose ' + userSelection + '.');
     } else if (computerSelection == 'rock' && userSelection == 'scissors'){
@@ -81,6 +82,7 @@ function playRound(){
 }
 
 function game(){
+
     while(userScore < 3 && computerScore < 3){
         playRound();
         console.log('Current Score: You - ' + userScore + ' | Computer - ' + computerScore);
