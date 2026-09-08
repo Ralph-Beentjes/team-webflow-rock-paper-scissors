@@ -104,11 +104,11 @@ function game(){
         userScore = 0;
         computerScore = 0;
 
-        return 'Congratulations! You have defeated the mighty computer and are allowed to leave... for now';
+        return 'Congratulations! You have defeated the mighty computer and are allowed to leave... for now. If you wish to play again, press game() and enter.';
     } else {
         userScore = 0;
         computerScore = 0;
         
-        return 'Mwuahaha! The mighty computer has defeated you! Enjoy your eternity in a digital graveyard, human!';
+        return 'Mwuahaha! The mighty computer has defeated you! Enjoy your eternity in a digital graveyard, human! But I feel generous, you can try again, press game() and enter.';
     }
 }
