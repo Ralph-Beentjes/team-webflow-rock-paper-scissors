@@ -35,8 +35,10 @@ function computerPlay(){
 }
 
 function userPlay(){
-    let userInput = prompt('Please enter your weapon of choice: rock, paper or scissors \n\n' + 'Current Score: You - ' + userScore + ' | Computer - ' + computerScore);
     userChoice = '';
+    
+    let userInput = prompt('Please enter your weapon of choice: rock, paper or scissors \n\n' + 'Current Score: You - ' + userScore + ' | Computer - ' + computerScore);
+    
 
     if (userInput !== null) {
         userInput = userInput.toLowerCase().trim();
